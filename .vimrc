@@ -18,3 +18,9 @@ hi CursorColumn term=bold cterm=bold ctermbg=darkblue
 
 " clang_complete
 let g:clang_library_path='/usr/lib/libclang.so'
+
+" Keymaps
+nmap <C-H> gT
+nmap <C-L> gt
+nmap <C-Left> :tabmove-<cr>
+nmap <C-Right> :tabmove+<cr>

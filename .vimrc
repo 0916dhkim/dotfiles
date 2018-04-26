@@ -1,10 +1,13 @@
 " Show line number
 set number
 
+" Pathogen
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+
 " Use file type plugins
 syntax on
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 
 " Set Highlight
 set hlsearch

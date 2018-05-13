@@ -6,9 +6,11 @@ autoload -Uz compinit promptinit
 compinit
 promptinit
 
+zstyle ':completion:*' menu select
+
 # gpg
 export GPG_TTY=$(tty)
 
-zstyle ':completion:*' menu select
-
-prompt clint
+# Custom Prompt
+PROMPT='%F{yellow}%n%f@%F{green}%m%f>%(!.#.$) '
+RPROMPT='%F{green}%~%f'

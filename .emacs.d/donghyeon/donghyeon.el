@@ -8,6 +8,7 @@
 (require 'donghyeon-irony)
 (require 'donghyeon-ivy)
 (require 'donghyeon-look-and-feel)
+(require 'donghyeon-magit)
 (require 'donghyeon-projectile)
 (require 'ensure-package)
 

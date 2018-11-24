@@ -16,5 +16,6 @@
   (revert-buffer))
 
 (define-key dired-mode-map (kbd "c") #'dired-new-file)
+(define-key dired-mode-map (kbd "C") #'dired-create-directory)
 
 (provide 'donghyeon-dired)

@@ -21,3 +21,5 @@
                             (mode . emacs-lisp-mode)))
          ("Git" (filename . ".gitignore"))
          ("Dired" (mode . dired-mode)))))
+
+(provide 'donghyeon-ibuffer)

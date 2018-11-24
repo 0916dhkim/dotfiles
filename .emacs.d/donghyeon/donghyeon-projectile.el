@@ -1,3 +1,4 @@
+(require 'ensure-package)
 (ensure-package 'projectile)
 (require 'projectile)
 
@@ -13,3 +14,5 @@
 (define-key global-map [remap find-file] #'projectile-find-file)
 
 (projectile-mode 1)
+
+(provide 'donghyeon-projectile)

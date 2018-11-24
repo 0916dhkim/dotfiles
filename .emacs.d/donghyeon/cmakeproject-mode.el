@@ -36,3 +36,7 @@
                                     cmakeproject-build-directory)))
                 (irony-cdb-autosetup-compile-options)))
             nil t))
+
+(add-hook 'c++-mode-hook #'cmakeproject-mode)
+
+(provide 'cmakeproject-mode)

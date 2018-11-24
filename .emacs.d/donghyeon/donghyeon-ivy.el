@@ -1,3 +1,4 @@
+(require 'ensure-package)
 (ensure-package 'ivy)
 (ensure-package 'counsel)
 (ensure-package 'swiper)
@@ -14,3 +15,5 @@
       '((t . ivy--regex-ignore-order)))
 
 (ivy-mode 1)
+
+(provide 'donghyeon-ivy)

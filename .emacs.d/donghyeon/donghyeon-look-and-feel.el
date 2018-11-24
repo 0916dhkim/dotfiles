@@ -1,3 +1,5 @@
+(require 'ensure-package)
+
 ;; Color Theme
 (ensure-package 'monokai-theme)
 (load-theme 'monokai t)
@@ -29,3 +31,5 @@
 (require 'golden-ratio-scroll-screen)
 (global-set-key [remap scroll-down-command] 'golden-ratio-scroll-screen-down)
 (global-set-key [remap scroll-up-command] 'golden-ratio-scroll-screen-up)
+
+(provide 'donghyeon-look-and-feel)

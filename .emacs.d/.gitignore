@@ -1,0 +1,26 @@
+# Auto save
+auto-save-list/
+
+# Auto-generated customizations.
+custom.el
+
+# ELPA
+elpa/
+
+# eshell
+eshell/
+
+# Games
+games/
+
+# Backup files
+**~
+
+# Irony
+irony/
+
+# Projectile
+projectile-bookmarks.eld
+
+# url
+url/

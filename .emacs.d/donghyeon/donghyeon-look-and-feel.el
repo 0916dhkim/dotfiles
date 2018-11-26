@@ -5,8 +5,21 @@
 (load-theme 'monokai t)
 
 ;; Use system font.
-(add-to-list 'default-frame-alist
-             '(font . "Hack-11"))
+(defconst donghyeon-fonts
+  '("Hack-11"
+    "Ubuntu Mono-11"))
+(let ((fontset-name (create-fontset-from-fontset-spec
+                     standard-fontset-spec)))
+  (dolist (f (reverse donghyeon-fonts))
+    (let ((fs (find-font (font-spec :name f))))
+      (when fs
+        (set-fontset-font fontset-name
+                          'unicode
+                          (font-spec :name f)
+                          nil
+                          'prepend))))
+  (add-to-list 'default-frame-alist
+               `(font . ,fontset-name)))
 
 ;; Disable welcome screen.
 (setq inhibit-startup-screen t)

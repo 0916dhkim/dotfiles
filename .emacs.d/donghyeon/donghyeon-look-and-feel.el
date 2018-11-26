@@ -4,6 +4,9 @@
 (ensure-package 'monokai-theme)
 (load-theme 'monokai t)
 
+;; Use system font.
+(setq font-use-system-font t)
+
 ;; Show line numbers.
 (global-display-line-numbers-mode)
 

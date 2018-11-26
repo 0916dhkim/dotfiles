@@ -5,7 +5,8 @@
 (load-theme 'monokai t)
 
 ;; Use system font.
-(setq font-use-system-font t)
+(add-to-list 'default-frame-alist
+             '(font . "Hack-11"))
 
 ;; Disable welcome screen.
 (setq inhibit-startup-screen t)

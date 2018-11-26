@@ -7,6 +7,9 @@
 ;; Use system font.
 (setq font-use-system-font t)
 
+;; Disable welcome screen.
+(setq inhibit-startup-screen t)
+
 ;; Show line numbers.
 (global-display-line-numbers-mode)
 

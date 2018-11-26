@@ -10,6 +10,9 @@
 ;; Show line numbers.
 (global-display-line-numbers-mode)
 
+;; Do not show scrollbars.
+(scroll-bar-mode -1)
+
 ;; Mode line configuration.
 (line-number-mode)
 (column-number-mode)

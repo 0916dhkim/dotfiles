@@ -7,6 +7,9 @@
 ;; Always do dired-jump in a new window.
 (global-set-key [remap dired-jump] #'dired-jump-other-window)
 
+;; Remap list-directory to dired.
+(global-set-key [remap list-directory] #'dired)
+
 (defun dired-new-file (file)
   "Create new file at FILE."
   (interactive "GNew File Name: ")

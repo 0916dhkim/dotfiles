@@ -3,7 +3,6 @@
 (require 'donghyeon-clang-format)
 (require 'donghyeon-company)
 (require 'donghyeon-dired)
-(require 'donghyeon-emacs-lisp)
 (require 'donghyeon-flycheck)
 (require 'donghyeon-ibuffer)
 (require 'donghyeon-irony)

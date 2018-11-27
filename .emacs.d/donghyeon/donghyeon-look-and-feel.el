@@ -34,6 +34,9 @@
 (line-number-mode)
 (column-number-mode)
 
+;; Disable use of tab characters.
+(setq-default indent-tabs-mode nil)
+
 ;;; Nyan
 (ensure-package 'nyan-mode)
 (require 'nyan-mode)

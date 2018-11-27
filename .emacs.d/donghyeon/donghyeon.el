@@ -1,5 +1,6 @@
 (require 'cmakeproject-mode)
 (require 'donghyeon-backup)
+(require 'donghyeon-clang-format)
 (require 'donghyeon-company)
 (require 'donghyeon-dired)
 (require 'donghyeon-emacs-lisp)

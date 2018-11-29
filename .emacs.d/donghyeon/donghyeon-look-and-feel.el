@@ -1,8 +1,7 @@
 (require 'ensure-package)
 
 ;; Color Theme
-(ensure-package 'monokai-theme)
-(load-theme 'monokai t)
+(load-theme 'tango-dark)
 
 ;; Use system font.
 (defconst donghyeon-fonts

@@ -9,6 +9,7 @@
 (require 'donghyeon-ivy)
 (require 'donghyeon-look-and-feel)
 (require 'donghyeon-magit)
+(require 'donghyeon-powerline)
 (require 'donghyeon-projectile)
 (require 'ensure-package)
 

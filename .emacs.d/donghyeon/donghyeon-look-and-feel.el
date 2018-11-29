@@ -1,7 +1,7 @@
 (require 'ensure-package)
 
 ;; Color Theme
-(load-theme 'tango-dark)
+(load-theme 'deeper-blue)
 
 ;; Use system font.
 (defconst donghyeon-fonts

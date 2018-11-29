@@ -1,3 +1,4 @@
+(require 'donghyeon-rainbow-delimiters)
 (require 'cmakeproject-mode)
 (require 'donghyeon-backup)
 (require 'donghyeon-clang-format)

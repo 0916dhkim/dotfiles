@@ -8,9 +8,10 @@
 ;; Replace default indent function with clang-format-region.
 (fset 'c-indent-region #'clang-format-region)
 
-;; Run clang-format before save
+;; Run clang-format before save.
 (add-hook 'c++-mode-hook
           (lambda ()
-            (add-hook 'before-save-hook #'clang-format-buffer)))
+            (add-hook 'before-save-hook #'clang-format-buffer))
+          nil t)
 
 (provide 'donghyeon-clang-format)

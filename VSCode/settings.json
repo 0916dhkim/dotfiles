@@ -1,0 +1,22 @@
+{
+    "workbench.colorTheme": "Monokai",
+    "explorer.autoReveal": false,
+    "search.useIgnoreFiles": false,
+    "window.autoDetectHighContrast": false,
+    "window.enableMenuBarMnemonics": false,
+    "window.restoreWindows": "none",
+    "workbench.list.openMode": "doubleClick",
+    "workbench.startupEditor": "none",
+    "workbench.statusBar.feedback.visible": false,
+    "editor.renderWhitespace": "all",
+    "editor.cursorStyle": "block",
+    "files.exclude": {
+        "**/.DS_Store": false,
+        "**/.git": false,
+        "**/.hg": false,
+        "**/.svn": false,
+        "**/CVS": false
+    },
+    "editor.dragAndDrop": false,
+    "telemetry.enableTelemetry": false
+}

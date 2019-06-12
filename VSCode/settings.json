@@ -1,5 +1,4 @@
 {
-    "workbench.colorTheme": "Monokai",
     "explorer.autoReveal": false,
     "search.useIgnoreFiles": false,
     "window.autoDetectHighContrast": false,
@@ -18,5 +17,6 @@
         "**/CVS": false
     },
     "editor.dragAndDrop": false,
-    "telemetry.enableTelemetry": false
+    "telemetry.enableTelemetry": false,
+    "terminal.integrated.scrollback": 5000
 }

@@ -1,12 +1,10 @@
 {
     "explorer.autoReveal": false,
     "search.useIgnoreFiles": false,
-    "window.autoDetectHighContrast": false,
     "window.enableMenuBarMnemonics": false,
     "window.restoreWindows": "none",
     "workbench.list.openMode": "doubleClick",
     "workbench.startupEditor": "none",
-    "workbench.statusBar.feedback.visible": false,
     "editor.renderWhitespace": "all",
     "editor.cursorStyle": "block",
     "files.exclude": {

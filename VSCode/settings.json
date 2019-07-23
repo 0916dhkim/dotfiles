@@ -16,5 +16,8 @@
     },
     "editor.dragAndDrop": false,
     "telemetry.enableTelemetry": false,
-    "terminal.integrated.scrollback": 5000
+    "terminal.integrated.scrollback": 5000,
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.tree.indent": 20,
+    "workbench.colorTheme": "Tomorrow Night Blue"
 }

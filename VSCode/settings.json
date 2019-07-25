@@ -19,5 +19,6 @@
     "terminal.integrated.scrollback": 5000,
     "workbench.tree.renderIndentGuides": "always",
     "workbench.tree.indent": 20,
-    "workbench.colorTheme": "Monokai"
+    "workbench.colorTheme": "Monokai",
+    "files.eol": "\n"
 }

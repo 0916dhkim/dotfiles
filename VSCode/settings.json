@@ -20,5 +20,6 @@
     "workbench.tree.renderIndentGuides": "always",
     "workbench.tree.indent": 20,
     "workbench.colorTheme": "Monokai",
-    "files.eol": "\n"
+    "files.eol": "\n",
+    "editor.minimap.enabled": false
 }

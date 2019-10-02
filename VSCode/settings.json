@@ -21,5 +21,7 @@
     "workbench.tree.indent": 20,
     "workbench.colorTheme": "Monokai",
     "files.eol": "\n",
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "editor.fontFamily": "'Noto Mono','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.suggestSelection": "first"
 }

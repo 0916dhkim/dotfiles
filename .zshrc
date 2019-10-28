@@ -11,6 +11,13 @@ zstyle ':completion:*' menu select
 # gpg
 export GPG_TTY=$(tty)
 
+# Use vim or nvim for editor.
+if command -v nvim > /dev/null; then
+    export EDITOR=nvim
+elif command -v vim > /dev/null; then
+    export EDITOR=vim
+fi
+
 # VCS info
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' stagedstr '*'

@@ -22,6 +22,7 @@
     "workbench.colorTheme": "Monokai",
     "files.eol": "\n",
     "editor.minimap.enabled": false,
-    "editor.fontFamily": "'Noto Mono','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "editor.suggestSelection": "first"
+    "editor.fontFamily": "'Fira Code','Noto Mono','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.suggestSelection": "first",
+    "editor.fontLigatures": true
 }

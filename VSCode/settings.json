@@ -24,5 +24,6 @@
     "editor.minimap.enabled": false,
     "editor.fontFamily": "'Fira Code','Noto Mono','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.suggestSelection": "first",
-    "editor.fontLigatures": true
+    "editor.fontLigatures": true,
+    "workbench.editor.showTabs": false
 }

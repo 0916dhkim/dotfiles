@@ -19,11 +19,37 @@
     "terminal.integrated.scrollback": 5000,
     "workbench.tree.renderIndentGuides": "always",
     "workbench.tree.indent": 20,
-    "workbench.colorTheme": "Monokai",
     "files.eol": "\n",
     "editor.minimap.enabled": false,
     "editor.fontFamily": "'Fira Code','Noto Mono','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.suggestSelection": "first",
     "editor.fontLigatures": true,
-    "workbench.editor.showTabs": false
+    "workbench.editor.showTabs": false,
+    "workbench.activityBar.visible": true,
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "editor.mouseWheelScrollSensitivity": 2,
+    "todohighlight.include": [
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.html",
+        "**/*.php",
+        "**/*.css",
+        "**/*.scss",
+        "**/*.py"
+    ],
+    "todohighlight.exclude": [
+        "**/node_modules/**",
+        "**/bower_components/**",
+        "**/dist/**",
+        "**/build/**",
+        "**/.vscode/**",
+        "**/.github/**",
+        "**/_output/**",
+        "**/*.min.*",
+        "**/*.map",
+        "**/.next/**",
+        "**/.venv/**"
+    ]
 }

@@ -1,5 +1,5 @@
 [format]
-	pretty = format:%C(yellow)%h %Cblue%<(15,trunc)%ad %Cgreen%<(15,trunc)%aN %Cred%d %Creset%s
+	pretty = format:%w(72,0,9)%C(yellow bold)%h%Creset %C(red bold)%d%Creset %s %C(blue bold)%ad%Creset %C(green bold)%ae%Creset
 [log]
 	abbrevCommit = true
 	date = relative

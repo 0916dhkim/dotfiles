@@ -51,5 +51,7 @@
         "**/*.map",
         "**/.next/**",
         "**/.venv/**"
-    ]
+    ],
+    "eslint.lintTask.enable": true,
+    "workbench.editor.enablePreview": false
 }

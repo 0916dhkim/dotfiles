@@ -1,0 +1,7 @@
+dbaeumer.vscode-eslint
+dracula-theme.theme-dracula
+joaomoreno.github-sharp-theme
+sdras.night-owl
+vscodevim.vim
+wayou.vscode-todo-highlight
+zhuangtongfa.One-dark-pro

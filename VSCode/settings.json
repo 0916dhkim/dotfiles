@@ -55,9 +55,13 @@
     "eslint.lintTask.enable": true,
     "workbench.editor.enablePreview": false,
     "editor.lineNumbers": "relative",
-    "workbench.colorTheme": "Dracula",
     "vim.handleKeys": {
         "<C-d>": true,
-        "<C-j>": false
-    }
+        "<C-j>": false,
+        "<C-k>": false,
+        "<C-w>": false
+    },
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "gitlens.keymap": "none"
 }

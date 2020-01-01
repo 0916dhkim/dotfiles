@@ -57,12 +57,16 @@
     "editor.lineNumbers": "relative",
     "vim.handleKeys": {
         "<C-d>": true,
-        "<C-j>": false
+        "<C-j>": false,
+        "<C-k>": false,
+        "<C-w>": false
     },
     "gitlens.views.repositories.location": "scm",
     "gitlens.views.fileHistory.location": "gitlens",
     "gitlens.views.lineHistory.location": "gitlens",
     "gitlens.views.compare.location": "gitlens",
     "gitlens.views.search.location": "gitlens",
-    "git.confirmSync": false
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "gitlens.keymap": "none"
 }

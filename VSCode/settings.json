@@ -59,7 +59,8 @@
         "<C-d>": true,
         "<C-j>": false,
         "<C-k>": false,
-        "<C-w>": false
+        "<C-w>": false,
+        "<C-b>": false
     },
     "gitlens.views.repositories.location": "scm",
     "gitlens.views.fileHistory.location": "gitlens",
@@ -68,5 +69,8 @@
     "gitlens.views.search.location": "gitlens",
     "git.confirmSync": false,
     "git.autofetch": true,
-    "gitlens.keymap": "none"
+    "gitlens.keymap": "none",
+    "terminal.integrated.commandsToSkipShell": [
+        "workbench.action.toggleSidebarVisibility"
+    ]
 }

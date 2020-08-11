@@ -1,0 +1,2 @@
+Requires oh-my-zsh.
+

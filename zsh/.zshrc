@@ -1,3 +1,23 @@
+### OH-MY-ZSH
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="robbyrussell"
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+### Personal Settings
 # Local PATH
 if [[ -d $HOME/.local/bin ]] ; then
 	export PATH=$HOME/.local/bin:$PATH
@@ -22,43 +42,6 @@ if command -v nvim > /dev/null; then
 elif command -v vim > /dev/null; then
     export EDITOR=vim
 fi
-
-# VCS info
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' stagedstr '*'
-zstyle ':vcs_info:*' unstagedstr '*'
-zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' formats '%b%c%u'
-vcs_info_wrapper() {
-    vcs_info
-
-    if [[ ! -z $vcs_info_msg_0_ ]]; then
-        PROMPT='%K{3}%F{10}'
-	PROMPT+="%K{3}%F{0} $vcs_info_msg_0_ "
-        PROMPT+='%K{10}%F{3}'
-        echo $PROMPT
-    fi
-}
-
-# Python virtual environment prompt
-poetry_prompt() {
-    if [[ -v POETRY_ACTIVE ]]; then
-        PROMPT='%K{3}%F{0}Poetry '
-        PROMPT+='%K{10}%F{3}'
-        echo $PROMPT
-    fi
-}
-
-# Custom Prompt
-setopt PROMPT_SUBST
-PROMPT=$'$(poetry_prompt)'
-PROMPT+='%K{10}%F{0} %n '
-PROMPT+=$'$(vcs_info_wrapper)'
-PROMPT+='%K{10}%F{0}%(!.#.$)'
-PROMPT+='%k%F{10}%f '
-
-RPROMPT='%K{10}%F{0} '
-RPROMPT+='%~%f'
 
 # Key bindings
 # create a zkbd compatible hash;

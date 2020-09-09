@@ -23,6 +23,9 @@ if [[ -d $HOME/.local/bin ]] ; then
 	export PATH=$HOME/.local/bin:$PATH
 fi
 
+# Fix prompt width
+export LC_CTYPE=en_US.UTF-8
+
 # ls formats
 alias ls='ls --color=auto'
 

@@ -1,4 +1,4 @@
-# Tabs
+" Tabs
 set smartindent
 set tabstop=4
 set expandtab

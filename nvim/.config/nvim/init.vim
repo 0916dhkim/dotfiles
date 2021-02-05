@@ -23,7 +23,8 @@ set shiftwidth=2
 let g:coc_global_extensions = [
   \ 'coc-tsserver',
   \ 'coc-eslint',
-  \ 'coc-prisma'
+  \ 'coc-prisma',
+  \ 'coc-clangd',
   \ ]
 
 " Keyboard shortcuts.

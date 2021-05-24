@@ -22,6 +22,7 @@ source $ZSH/oh-my-zsh.sh
 if [[ -d $HOME/.local/bin ]] ; then
 	export PATH=$HOME/.local/bin:$PATH
 fi
+export PATH="$(yarn global bin):$PATH"
 
 # Fix prompt width
 export LC_CTYPE=en_US.UTF-8

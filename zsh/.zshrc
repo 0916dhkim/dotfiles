@@ -47,6 +47,15 @@ elif command -v vim > /dev/null; then
     export EDITOR=vim
 fi
 
+# Use virtualenvwrapper.
+if [[ -f /usr/bin/virtualenvwrapper.sh ]]; then
+    source /usr/bin/virtualenvwrapper.sh
+fi
+# Use RVM.
+if [[ -f $HOME/.rvm/scripts/rvm ]]; then
+    source $HOME/.rvm/scripts/rvm
+fi
+
 # Key bindings
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
@@ -100,3 +109,6 @@ if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
 	add-zle-hook-widget -Uz zle-line-init zle_application_mode_start
 	add-zle-hook-widget -Uz zle-line-finish zle_application_mode_stop
 fi
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

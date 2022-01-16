@@ -69,6 +69,7 @@ fi
 if [[ -f $HOME/.nvm/nvm.sh ]]; then
     export NVM_DIR=$HOME/.nvm
     source $NVM_DIR/nvm.sh
+    source $NVM_DIR/bash_completion
 fi
 
 # Key bindings
@@ -127,3 +128,4 @@ fi
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+

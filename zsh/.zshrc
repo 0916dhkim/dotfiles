@@ -22,7 +22,6 @@ source $ZSH/oh-my-zsh.sh
 if [[ -d $HOME/.local/bin ]] ; then
 	export PATH=$HOME/.local/bin:$PATH
 fi
-export PATH="$(yarn global bin):$PATH"
 
 # Fix prompt width
 export LC_CTYPE=en_US.UTF-8
@@ -47,6 +46,17 @@ elif command -v vim > /dev/null; then
     export EDITOR=vim
 fi
 
+# Use pyenv.
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if which pyenv > /dev/null; then
+    eval "$(pyenv init --path)" # this only sets up the path stuff
+    eval "$(pyenv init -)"      # this makes pyenv work in the shell
+fi
+if which pyenv-virtualenv-init > /dev/null; then
+    eval "$(pyenv virtualenv-init - zsh)"
+fi
+
 # Use virtualenvwrapper.
 if [[ -f /usr/bin/virtualenvwrapper.sh ]]; then
     source /usr/bin/virtualenvwrapper.sh
@@ -54,6 +64,11 @@ fi
 # Use RVM.
 if [[ -f $HOME/.rvm/scripts/rvm ]]; then
     source $HOME/.rvm/scripts/rvm
+fi
+# Use NVM.
+if [[ -f $HOME/.nvm/nvm.sh ]]; then
+    export NVM_DIR=$HOME/.nvm
+    source $NVM_DIR/nvm.sh
 fi
 
 # Key bindings

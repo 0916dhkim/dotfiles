@@ -3,3 +3,4 @@
 	path = format
 	path = eol
 	path = pull
+  path = push

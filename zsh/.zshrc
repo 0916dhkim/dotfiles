@@ -49,7 +49,7 @@ fi
 # Use pyenv.
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-if which pyenv > /dev/null; then
+if command -v pyenv > /dev/null; then
     eval "$(pyenv init --path)" # this only sets up the path stuff
     eval "$(pyenv init -)"      # this makes pyenv work in the shell
     pyenv_commands=( $(pyenv commands) )

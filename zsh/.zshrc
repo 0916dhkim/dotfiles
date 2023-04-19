@@ -13,7 +13,7 @@ ZSH_THEME="simple"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -63,12 +63,6 @@ fi
 # Use RVM.
 if [[ -f $HOME/.rvm/scripts/rvm ]]; then
     source $HOME/.rvm/scripts/rvm
-fi
-# Use NVM.
-if [[ -f $HOME/.nvm/nvm.sh ]]; then
-    export NVM_DIR=$HOME/.nvm
-    source $NVM_DIR/nvm.sh
-    source $NVM_DIR/bash_completion
 fi
 
 # Key bindings

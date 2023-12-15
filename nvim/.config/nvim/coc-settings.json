@@ -1,5 +1,0 @@
-{
-  "suggest.noselect": false,
-  "coc.preferences.formatOnSaveFiletypes": ["cpp","h"]
-}
-

@@ -4,3 +4,5 @@
 vim.g.root_spec = { ".git", "cwd" }
 local opt = vim.opt
 opt.relativenumber = false
+
+vim.g.lazyvim_eslint_auto_format = true

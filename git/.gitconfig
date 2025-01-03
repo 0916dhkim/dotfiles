@@ -1,2 +1,2 @@
 [include]
-  path = .gitconfig.d/all
+path = .gitconfig.d/all

@@ -52,12 +52,6 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv > /dev/null; then
     eval "$(pyenv init --path)" # this only sets up the path stuff
     eval "$(pyenv init -)"      # this makes pyenv work in the shell
-    pyenv_commands=( $(pyenv commands) )
-    for pyenv_command in "${pyenv_commands[@]}"; do
-        if [ "$pyenv_command" = "virtualenv-init" ]; then
-            eval "$(pyenv virtualenv-init - zsh)"
-        fi
-    done
 fi
 
 # Use RVM.

@@ -124,3 +124,20 @@ export NVM_DIR="$HOME/.nvm"
 
 # Increase Nodejs memory limit
 export NODE_OPTIONS=--max_old_space_size=8192
+
+# bun completions
+[ -s "/home/danny/.bun/_bun" ] && source "/home/danny/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Cursor
+if [[ -f /usr/bin/cursor ]]; then
+  function cursor {
+    nohup /usr/bin/cursor "$@" > /dev/null 2>&1 &
+    disown %%
+  }
+fi
+
+. "$HOME/.local/bin/env"

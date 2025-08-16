@@ -5,3 +5,4 @@
 	path = pull
   path = push
   path = override
+  path = default-branch

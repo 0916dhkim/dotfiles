@@ -133,11 +133,11 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Cursor
-if [[ -f /usr/bin/cursor ]]; then
+cursor_path=$(command -v cursor)
+if [[ -f $cursor_path ]]; then
   function cursor {
-    nohup /usr/bin/cursor "$@" > /dev/null 2>&1 &
+    nohup $cursor_path "$@" > /dev/null 2>&1 &
     disown %%
   }
 fi
 
-. "$HOME/.local/bin/env"

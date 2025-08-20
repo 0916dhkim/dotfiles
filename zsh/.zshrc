@@ -131,13 +131,3 @@ export NODE_OPTIONS=--max_old_space_size=8192
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-
-# Cursor
-cursor_path=$(command -v cursor)
-if [[ -f $cursor_path ]]; then
-  function cursor {
-    nohup $cursor_path "$@" > /dev/null 2>&1 &
-    disown %%
-  }
-fi
-

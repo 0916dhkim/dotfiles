@@ -1,0 +1,167 @@
+{
+  "explorer.autoReveal": false,
+  "window.enableMenuBarMnemonics": false,
+  "window.restoreWindows": "none",
+  "workbench.list.openMode": "doubleClick",
+  "editor.renderWhitespace": "all",
+  "editor.cursorStyle": "block",
+  "files.exclude": {
+    "**/.trunk/*out": true
+  },
+  "editor.dragAndDrop": false,
+  "terminal.integrated.scrollback": 5000,
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.tree.indent": 20,
+  "files.eol": "\n",
+  "editor.fontFamily": "'Monaspace Neon','Fira Mono','Source Code Pro Medium', 'Roboto Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.suggestSelection": "first",
+  "editor.fontLigatures": true,
+  "workbench.editor.showTabs": "single",
+  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "todohighlight.include": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.html",
+    "**/*.php",
+    "**/*.css",
+    "**/*.scss",
+    "**/*.py"
+  ],
+  "todohighlight.exclude": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/.vscode/**",
+    "**/.github/**",
+    "**/_output/**",
+    "**/*.min.*",
+    "**/*.map",
+    "**/.next/**",
+    "**/.venv/**"
+  ],
+  "eslint.lintTask.enable": true,
+  "workbench.editor.enablePreview": false,
+  "vim.handleKeys": {
+    "<C-d>": true,
+    "<C-m>": false,
+    "<C-j>": false,
+    "<C-k>": false,
+    "<C-l>": false,
+    "<C-w>": false,
+    "<C-b>": false,
+    "<C-p>": false,
+    "<C-i>": false
+  },
+  "gitlens.views.repositories.location": "scm",
+  "gitlens.views.fileHistory.location": "gitlens",
+  "gitlens.views.lineHistory.location": "gitlens",
+  "gitlens.views.compare.location": "gitlens",
+  "gitlens.views.search.location": "gitlens",
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "gitlens.keymap": "none",
+  "terminal.integrated.commandsToSkipShell": [
+    "workbench.action.closeAllGroups",
+    "workbench.action.closeAllEditors",
+    "workbench.action.selectTheme",
+    "workbench.action.files.openFolder",
+    "workbench.action.closeActiveEditor"
+  ],
+  "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
+  "sync.autoDownload": true,
+  "sync.autoUpload": true,
+  "sync.gist": "63e40fb1e4a27bc6804c6d697c67acb0",
+  "sync.quietSync": true,
+  "workbench.startupEditor": "none",
+  "vim.scroll": 20,
+  "extensions.ignoreRecommendations": true,
+  "java.semanticHighlighting.enabled": true,
+  "editor.tabSize": 2,
+  "search.quickOpen.includeHistory": false,
+  "eslint.format.enable": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "window.title": "${rootPath}",
+  "editor.minimap.enabled": false,
+  "jupyter.askForKernelRestart": false,
+  "python.defaultInterpreterPath": "C:\\Program Files (x86)\\Python38-32\\python.exe",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "[handlebars]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.smoothScrolling": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "trunk.trunkGrayOutNonBlockingIssues": false,
+  "comments.openView": "never",
+  "files.watcherExclude": {
+    "**/.trunk/*out": true
+  },
+  "editor.inlineSuggest.enabled": true,
+  "python.formatting.provider": "black",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.menuBarVisibility": "hidden",
+  "githubPullRequests.pullBranch": "never",
+  "xstate.nestTypegenFiles": false,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml",
+    "Cargo.toml": "Cargo.lock"
+  },
+  "[plaintext]": {
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 80,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false
+  },
+  "sort-imports.on-save": false,
+  "editor.formatOnSave": true,
+  "workbench.iconTheme": "ayu",
+  "workbench.colorTheme": "Ayu Mirage Bordered",
+  "explorer.confirmDelete": false,
+  "telemetry.telemetryLevel": "off",
+  "gitlens.telemetry.enabled": false,
+  "github.gitAuthentication": false,
+  "git.terminalAuthentication": false,
+  "cursor.composer.shouldChimeAfterChatFinishes": true
+}

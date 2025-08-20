@@ -8,7 +8,7 @@ const os = require("os");
 
 function main() {
   console.log(
-    "🔄 VSCode/Cursor Extension Sync - Auto-detecting sync direction..."
+    "🔄 VSCode/Cursor Extension Sync - Auto-detecting sync direction...",
   );
 
   sync_editor("code", "linux-vscode/.vscode/extensions/list.txt");
@@ -65,12 +65,12 @@ function determine_sync_direction(editor, list_file_path) {
       extension_timestamp
         ? new Date(extension_timestamp).toLocaleString()
         : "N/A"
-    }`
+    }`,
   );
   console.log(
     `   List file timestamp: ${
       list_timestamp ? new Date(list_timestamp).toLocaleString() : "N/A"
-    }`
+    }`,
   );
 
   return extension_timestamp > list_timestamp
@@ -99,27 +99,22 @@ function pull_from_extensions_list(command_path, list_file_path) {
   const installed_extensions = new Set(get_installed_extensions(command_path));
 
   const to_install = [...desired_extensions].filter(
-    (ext) => !installed_extensions.has(ext)
+    (ext) => !installed_extensions.has(ext),
   );
   const to_uninstall = [...installed_extensions].filter(
-    (ext) => !desired_extensions.has(ext)
+    (ext) => !desired_extensions.has(ext),
   );
 
-  for (const extension of to_install) {
-    install_extension(command_path, extension);
-  }
-
-  for (const extension of to_uninstall) {
-    uninstall_extension(command_path, extension);
-  }
+  install_extensions(command_path, to_install);
+  uninstall_extensions(command_path, to_uninstall);
 
   if (to_install.length > 0 || to_uninstall.length > 0) {
     console.log(
-      `   ✅ Sync complete: ${to_install.length} installed, ${to_uninstall.length} uninstalled`
+      `   ✅ Sync complete: ${to_install.length} installed, ${to_uninstall.length} uninstalled`,
     );
   } else {
     console.log(
-      `   ✅ Already in sync: ${installed_extensions.size} extensions`
+      `   ✅ Already in sync: ${installed_extensions.size} extensions`,
     );
   }
 }
@@ -155,22 +150,34 @@ function get_installed_extensions(command_path) {
 
 /**
  * @param {string} command_path - Full path to editor CLI command
- * @param {string} extension
+ * @param {string[]} extensions
  */
-function install_extension(command_path, extension) {
-  execSync(`${command_path} --install-extension ${extension}`, {
-    stdio: "inherit",
-  });
+function install_extensions(command_path, extensions) {
+  if (extensions.length === 0) {
+    return;
+  }
+  execSync(
+    `${command_path} ${extensions.map((ext) => `--install-extension ${ext}`).join(" ")}`,
+    {
+      stdio: "inherit",
+    },
+  );
 }
 
 /**
  * @param {string} command_path - Full path to editor CLI command
- * @param {string} extension
+ * @param {string[]} extensions
  */
-function uninstall_extension(command_path, extension) {
-  execSync(`${command_path} --uninstall-extension ${extension}`, {
-    stdio: "inherit",
-  });
+function uninstall_extensions(command_path, extensions) {
+  if (extensions.length === 0) {
+    return;
+  }
+  execSync(
+    `${command_path} ${extensions.map((ext) => `--uninstall_extension ${ext}`).join(" ")}`,
+    {
+      stdio: "inherit",
+    },
+  );
 }
 
 /**
@@ -195,7 +202,7 @@ function write_list(list_file_path, extensions) {
   console.log(
     `   ✅ List updated: ${
       extensions.length
-    } extensions written to ${path.relative(__dirname, list_file_path)}`
+    } extensions written to ${path.relative(__dirname, list_file_path)}`,
   );
 }
 

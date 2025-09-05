@@ -8,7 +8,7 @@ const os = require("os");
 
 function main() {
   console.log(
-    "🔄 VSCode/Cursor Extension Sync - Auto-detecting sync direction...",
+    "🔄 VSCode/Cursor Extension Sync - Auto-detecting sync direction..."
   );
 
   sync_editor("code", "linux-vscode/.vscode/extensions/list.txt");
@@ -65,12 +65,12 @@ function determine_sync_direction(editor, list_file_path) {
       extension_timestamp
         ? new Date(extension_timestamp).toLocaleString()
         : "N/A"
-    }`,
+    }`
   );
   console.log(
     `   List file timestamp: ${
       list_timestamp ? new Date(list_timestamp).toLocaleString() : "N/A"
-    }`,
+    }`
   );
 
   return extension_timestamp > list_timestamp
@@ -99,10 +99,10 @@ function pull_from_extensions_list(command_path, list_file_path) {
   const installed_extensions = new Set(get_installed_extensions(command_path));
 
   const to_install = [...desired_extensions].filter(
-    (ext) => !installed_extensions.has(ext),
+    (ext) => !installed_extensions.has(ext)
   );
   const to_uninstall = [...installed_extensions].filter(
-    (ext) => !desired_extensions.has(ext),
+    (ext) => !desired_extensions.has(ext)
   );
 
   install_extensions(command_path, to_install);
@@ -110,11 +110,11 @@ function pull_from_extensions_list(command_path, list_file_path) {
 
   if (to_install.length > 0 || to_uninstall.length > 0) {
     console.log(
-      `   ✅ Sync complete: ${to_install.length} installed, ${to_uninstall.length} uninstalled`,
+      `   ✅ Sync complete: ${to_install.length} installed, ${to_uninstall.length} uninstalled`
     );
   } else {
     console.log(
-      `   ✅ Already in sync: ${installed_extensions.size} extensions`,
+      `   ✅ Already in sync: ${installed_extensions.size} extensions`
     );
   }
 }
@@ -157,10 +157,12 @@ function install_extensions(command_path, extensions) {
     return;
   }
   execSync(
-    `${command_path} ${extensions.map((ext) => `--install-extension ${ext}`).join(" ")}`,
+    `${command_path} ${extensions
+      .map((ext) => `--install-extension ${ext}`)
+      .join(" ")}`,
     {
       stdio: "inherit",
-    },
+    }
   );
 }
 
@@ -169,14 +171,24 @@ function install_extensions(command_path, extensions) {
  * @param {string[]} extensions
  */
 function uninstall_extensions(command_path, extensions) {
+  console.log(
+    "Skipping uninstall because Cursor CLI does not support uninstalling multiple extensions."
+  );
+  for (const ext of extensions) {
+    console.log(`Skipping ${ext}`);
+  }
+  return;
+  // TODO: restore when the issue is resolved: https://forum.cursor.com/t/command-line-list-extensions/103565/13
   if (extensions.length === 0) {
     return;
   }
   execSync(
-    `${command_path} ${extensions.map((ext) => `--uninstall_extension ${ext}`).join(" ")}`,
+    `${command_path} ${extensions
+      .map((ext) => `--uninstall_extension ${ext}`)
+      .join(" ")}`,
     {
       stdio: "inherit",
-    },
+    }
   );
 }
 
@@ -202,7 +214,7 @@ function write_list(list_file_path, extensions) {
   console.log(
     `   ✅ List updated: ${
       extensions.length
-    } extensions written to ${path.relative(__dirname, list_file_path)}`,
+    } extensions written to ${path.relative(__dirname, list_file_path)}`
   );
 }
 

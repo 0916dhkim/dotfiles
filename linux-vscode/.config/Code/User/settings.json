@@ -157,11 +157,19 @@
   "sort-imports.on-save": false,
   "editor.formatOnSave": true,
   "workbench.iconTheme": "ayu",
-  "workbench.colorTheme": "Ayu Mirage Bordered",
+  "workbench.colorTheme": "New Moon",
   "explorer.confirmDelete": false,
   "telemetry.telemetryLevel": "off",
   "gitlens.telemetry.enabled": false,
   "github.gitAuthentication": false,
   "git.terminalAuthentication": false,
-  "cursor.composer.shouldChimeAfterChatFinishes": true
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "liveshare.anonymousGuestApproval": "accept",
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "typescript": false
+  }
 }

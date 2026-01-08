@@ -1,0 +1,1 @@
+../../../linux-cursor/.cursor/extensions/list.txt

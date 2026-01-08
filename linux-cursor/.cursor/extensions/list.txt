@@ -23,6 +23,7 @@ prisma.prisma
 ritwickdey.liveserver
 rust-lang.rust-analyzer
 samuelcolvin.jinjahtml
+shayanahmedkhan.freecodecamp-color-theme
 statelyai.stately-vscode
 svelte.svelte-vscode
 taniarascia.new-moon-vscode

@@ -987,5 +987,23 @@
   {
     "key": "cmd+i",
     "command": "composerMode.agent"
+  },
+  {
+    "key": "cmd+shift+i",
+    "command": "-workbench.action.toggleDevTools"
+  },
+  {
+    "key": "cmd+shift+i",
+    "command": "workbench.action.toggleAuxiliaryBar",
+    "when": "view.claudeVSCodeSidebarSecondary.visible"
+  },
+  {
+    "key": "cmd+shift+i",
+    "command": "claude-vscode.sidebar.open",
+    "when": "!view.claudeVSCodeSidebarSecondary.visible"
+  },
+  {
+    "key": "cmd+l",
+    "command": "claude-vscode.insertAtMention"
   }
 ]

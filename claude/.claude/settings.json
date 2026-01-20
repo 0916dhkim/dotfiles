@@ -1,0 +1,14 @@
+{
+  "alwaysThinkingEnabled": true,
+  "permissions": {
+    "allow": ["WebSearch", "WebFetch", "Edit", "MultiEdit"]
+  },
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ]
+    }
+  }
+}

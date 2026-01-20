@@ -7,7 +7,7 @@ const fs = require("fs");
 const path = require("path");
 
 function main() {
-  installGitHooksIfNotExist();
+  // installGitHooksIfNotExist();
 
   const directories = getAllDirectories();
 
@@ -60,18 +60,18 @@ function installIfMatchingOS(dir) {
   execSync(`stow -t ~ "${dir.name}"`, { stdio: "inherit", cwd: __dirname });
 }
 
-function installGitHooksIfNotExist() {
-  // Create a symlink for post-merge in .git/hooks if it doesn't exist
-  const postMergeLink = path.join(__dirname, ".git/hooks/post-merge");
-  const postMergeTarget = path.join(__dirname, "post-merge.js");
+// function installGitHooksIfNotExist() {
+//   // Create a symlink for post-merge in .git/hooks if it doesn't exist
+//   const postMergeLink = path.join(__dirname, ".git/hooks/post-merge");
+//   const postMergeTarget = path.join(__dirname, "post-merge.js");
 
-  if (fs.existsSync(postMergeLink)) {
-    return;
-  }
+//   if (fs.existsSync(postMergeLink)) {
+//     return;
+//   }
 
-  console.log("Installing git hooks...");
-  fs.symlinkSync(postMergeTarget, postMergeLink);
-  console.log("Installed git hooks.");
-}
+//   console.log("Installing git hooks...");
+//   fs.symlinkSync(postMergeTarget, postMergeLink);
+//   console.log("Installed git hooks.");
+// }
 
 main();

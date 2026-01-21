@@ -985,8 +985,14 @@
     "command": "-workbench.action.zoomReset"
   },
   {
+    "key": "ctrl+i",
+    "command": "claude-vscode.sidebar.open",
+    "when": "!composerFocused && !isMac"
+  },
+  {
     "key": "cmd+i",
-    "command": "composerMode.agent"
+    "command": "claude-vscode.sidebar.open",
+    "when": "!composerFocused && isMac"
   },
   {
     "key": "ctrl+shift+i",

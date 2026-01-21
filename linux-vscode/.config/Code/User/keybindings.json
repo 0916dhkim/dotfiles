@@ -989,21 +989,43 @@
     "command": "composerMode.agent"
   },
   {
+    "key": "ctrl+shift+i",
+    "command": "-workbench.action.toggleDevTools",
+    "when": "!isMac"
+  },
+  {
     "key": "cmd+shift+i",
-    "command": "-workbench.action.toggleDevTools"
+    "command": "-workbench.action.toggleDevTools",
+    "when": "isMac"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "workbench.action.toggleAuxiliaryBar",
+    "when": "view.claudeVSCodeSidebarSecondary.visible && !isMac"
   },
   {
     "key": "cmd+shift+i",
     "command": "workbench.action.toggleAuxiliaryBar",
-    "when": "view.claudeVSCodeSidebarSecondary.visible"
+    "when": "view.claudeVSCodeSidebarSecondary.visible && isMac"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "claude-vscode.sidebar.open",
+    "when": "!view.claudeVSCodeSidebarSecondary.visible && !isMac"
   },
   {
     "key": "cmd+shift+i",
     "command": "claude-vscode.sidebar.open",
-    "when": "!view.claudeVSCodeSidebarSecondary.visible"
+    "when": "!view.claudeVSCodeSidebarSecondary.visible && isMac"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "claude-vscode.insertAtMention",
+    "when": "!isMac"
   },
   {
     "key": "cmd+l",
-    "command": "claude-vscode.insertAtMention"
+    "command": "claude-vscode.insertAtMention",
+    "when": "isMac"
   }
 ]

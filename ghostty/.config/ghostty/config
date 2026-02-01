@@ -1,0 +1,5 @@
+font-family = MonaspiceXe Nerd Font
+
+# Theme configuration
+# Ghostty will automatically switch based on system theme
+theme = dark:Catppuccin Mocha,light:Catppuccin Latte

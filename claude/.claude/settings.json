@@ -1,14 +1,17 @@
 {
+  "model": "opus",
   "alwaysThinkingEnabled": true,
   "permissions": {
     "allow": ["WebSearch", "WebFetch", "Edit", "MultiEdit"]
   },
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
   "mcpServers": {
     "playwright": {
       "command": "npx",
-      "args": [
-        "@playwright/mcp@latest"
-      ]
+      "args": ["@playwright/mcp@latest"]
     }
   }
 }

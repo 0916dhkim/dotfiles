@@ -13,7 +13,7 @@ ZSH_THEME="superjarin"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# plugins=(git nvm)
+# plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -116,24 +116,30 @@ fi
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-
-# Setup nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # Increase Nodejs memory limit
 export NODE_OPTIONS=--max_old_space_size=8192
 
-# bun completions
-[ -s "/home/danny/.bun/_bun" ] && source "/home/danny/.bun/_bun"
-
 # bun
 export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+if [[ -d $BUN_INSTALL/bin ]] ; then
+	export PATH=$BUN_INSTALL/bin:$PATH
+fi
+
+# bun completions
+[ -s "$BUN_INSTALL/_bun" ] && source "$BUN_INSTALL/_bun"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/danny/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/danny/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/danny/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/danny/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
+
+# pnpm (PNPM_HOME is set in ~/.zshenv)
+if [[ -n $PNPM_HOME && -d $PNPM_HOME/bin ]] ; then
+	export PATH=$PNPM_HOME/bin:$PATH
+fi
+
+# opencode
+if [[ -d $HOME/.opencode/bin ]] ; then
+	export PATH=$HOME/.opencode/bin:$PATH
+fi
